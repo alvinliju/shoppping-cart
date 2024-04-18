@@ -1,2 +1,18 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<section>
+    <div class="container mt-4">
+        <div class="row"> <!-- Use 'row' class to create a flexbox row -->
+            {{#each orders}}
+            <div class="row col-md-3"> <!-- Use 'col-md-3' within the row to define column widths -->
+                <div class="card mb-4" style="width: 20rem; height:5rem;"> <!-- Add 'mb-4' for margin-bottom spacing -->
+                    <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.price}}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
